@@ -1,31 +1,31 @@
-import Vue from "vue";
-import VueI18n from "vue-i18n";
-
-Vue.use(VueI18n);
+import { createI18n } from "vue-i18n";
 
 const messages = {
   en: {
+    viewDetails: "View Details",
     name: "Name",
     id: "ID",
     allTypes: "All Types",
-    viewDetails: "View Details",
   },
   pt: {
+    viewDetails: "Ver Detalhes",
     name: "Nome",
     id: "ID",
     allTypes: "Todos os Tipos",
-    viewDetails: "Ver Detalhes",
   },
   es: {
+    viewDetails: "Ver Detalles",
     name: "Nombre",
     id: "ID",
     allTypes: "Todos los Tipos",
-    viewDetails: "Ver Detalles",
   },
 };
 
-export default new VueI18n({
+const i18n = createI18n({
+  legacy: false, // permite usar Composition API (setup)
   locale: "pt",
   fallbackLocale: "en",
   messages,
 });
+
+export default i18n;
