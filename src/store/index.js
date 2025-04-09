@@ -3,9 +3,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import axios from "axios";
 
-Vue.use(Vuex);
-
-export default createStore({
+const store = createStore({
   state: {
     pokemons: [],
     filters: {},
@@ -58,3 +56,4 @@ export default createStore({
     },
   },
 });
+export default store;
